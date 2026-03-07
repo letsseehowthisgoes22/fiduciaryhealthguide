@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Thank You — Fiduciary Health Guide"
+  description="Your message has been received. We will be in touch shortly."
+>
+  <div class="thankyou-section">
+    <div class="container content-width">
+      <h1>Thank You</h1>
+      <p class="lead">
+        Your message has been received. A member of our team will be in touch within one business day using your preferred contact method.
+      </p>
+      <p>
+        All communications are held in the strictest confidence.
+      </p>
+      <p style="margin-top: 2rem;">
+        <a href="/" class="back-link">&larr; Return to Fiduciary Health Guide</a>
+      </p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .thankyou-section {
+    padding: 6rem 0 4rem;
+    text-align: center;
+  }
+  .thankyou-section h1 {
+    color: var(--deep-navy);
+    margin-bottom: 1.5rem;
+  }
+  .thankyou-section .lead {
+    font-size: 1.2rem;
+    color: var(--slate-gray);
+    max-width: 600px;
+    margin: 0 auto 1rem;
+    line-height: 1.8;
+  }
+  .thankyou-section p {
+    color: var(--deep-charcoal);
+  }
+  .back-link {
+    color: var(--antique-gold);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .back-link:hover {
+    text-decoration: underline;
+  }
+</style>
