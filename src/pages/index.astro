@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Fiduciary Health Guide',
+  url: 'https://fiduciaryhealthguide.com',
+  description: 'Independent guidance for fiduciaries, family offices, and families of significant means navigating behavioral health challenges.',
+};
+
+const pillars = [
+  {
+    title: 'Family Governance',
+    href: '/family-governance/',
+    description: 'Structuring governance frameworks that address behavioral health with the same rigor applied to financial stewardship.',
+  },
+  {
+    title: 'Crisis Navigation',
+    href: '/crisis-navigation/',
+    description: 'Coordinated intervention strategies and emergency protocols for families where visibility and discretion are paramount.',
+  },
+  {
+    title: 'Wealth Stewardship',
+    href: '/wealth-stewardship/',
+    description: 'Integrating behavioral health considerations into trust structures, estate plans, and fiduciary decision-making.',
+  },
+  {
+    title: 'Family Office Operations',
+    href: '/family-office-operations/',
+    description: 'Operational frameworks for family offices navigating behavioral health coordination and care team oversight.',
+  },
+  {
+    title: 'Integrated Family Wellness',
+    href: '/integrated-family-wellness/',
+    description: 'Holistic approaches to family wellbeing that honor the unique pressures of significant wealth.',
+  },
+  {
+    title: "The Advisor's Practice",
+    href: '/the-advisors-practice/',
+    description: 'Resources for wealth advisors and fiduciaries navigating the intersection of finance and behavioral health.',
+  },
+];
+---
+
+<BaseLayout
+  title="Navigating Behavioral Health with Fiduciary Diligence"
+  description="Independent guidance for fiduciaries, family offices, and families of significant means navigating behavioral health challenges with discretion and diligence."
+  schema={schema}
+>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Where fiduciary responsibility meets behavioral health.</h1>
+      <p>
+        Independent guidance for families of significant means, their trusted advisors, and the professionals who serve them — navigating behavioral health challenges with the discretion and diligence these matters demand.
+      </p>
+      <a href="/family-governance/" class="hero-cta">Explore The Guide</a>
+    </div>
+  </section>
+
+  <!-- Content Pillars -->
+  <section class="pillars-section">
+    <div class="container">
+      <div class="content-width" style="text-align: center; margin-bottom: 1rem;">
+        <h2>The Guide</h2>
+        <p style="color: var(--slate-gray); font-family: var(--font-heading); font-style: italic;">
+          Six areas of practice where behavioral health and fiduciary responsibility converge.
+        </p>
+      </div>
+      <div class="pillars-grid">
+        {pillars.map(pillar => (
+          <a href={pillar.href} class="pillar-card">
+            <h3>{pillar.title}</h3>
+            <p>{pillar.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- For Advisors Section -->
+  <section class="section section--stone">
+    <div class="container content-width" style="text-align: center;">
+      <h2>For Advisors &amp; Fiduciaries</h2>
+      <p>
+        Wealth advisors, trust officers, and family office directors increasingly encounter situations where a beneficiary's behavioral health intersects with fiduciary duty. These are not edge cases — they are among the most consequential decisions in a practice.
+      </p>
+      <p>
+        The Fiduciary Health Guide provides frameworks, vocabularies, and decision-support resources designed specifically for professionals navigating these complex intersections.
+      </p>
+      <div style="margin-top: 2rem;">
+        <a href="/the-advisors-practice/" class="hero-cta" style="background-color: var(--deep-navy);">
+          Resources for Advisors
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discreet Connect Signal -->
+  <div class="discreet-cta">
+    <div class="container content-width">
+      <p>
+        When circumstances require more than a guide — when families need a professional liaison who understands both the clinical landscape and the expectations of significant wealth.
+      </p>
+      <a href="/connect/">Learn About Our Services</a>
+    </div>
+  </div>
+
+</BaseLayout>

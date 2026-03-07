@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'About This Guide — Fiduciary Health Guide',
+  description: 'Why this resource exists, who it serves, and the principles that guide its content.',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Fiduciary Health Guide',
+    url: 'https://fiduciaryhealthguide.com',
+  },
+};
+---
+
+<BaseLayout
+  title="About This Guide — Fiduciary Health Guide"
+  description="Why this resource exists, who it serves, and the principles that guide its content at the intersection of behavioral health and significant wealth."
+  schema={schema}
+>
+  <article>
+    <div class="article-header">
+      <div class="container content-width">
+        <p class="breadcrumb"><a href="/">Home</a> &rsaquo; About This Guide</p>
+        <h1>About This Guide</h1>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <div class="container content-width">
+        <p>
+          The Fiduciary Health Guide exists because the intersection of behavioral health and significant wealth is one of the most consequential and least addressed spaces in professional advisory practice. Wealth advisors, trust officers, family office directors, and the families they serve encounter situations every day that no training program prepares them for — and for which no comprehensive resource has previously existed.
+        </p>
+
+        <p>
+          This is that resource.
+        </p>
+
+        <h2>The Gap This Guide Addresses</h2>
+
+        <p>
+          The professional landscape is rich with resources for financial planning, estate strategy, and investment management. It is equally rich with clinical resources for behavioral health treatment. What has been conspicuously absent is a resource that bridges these domains — that speaks with authority about both the fiduciary landscape and the clinical landscape, and that addresses the specific dynamics that emerge when these worlds intersect in the context of significant wealth.
+        </p>
+
+        <p>
+          Consider the situations that wealth advisors encounter with regularity but discuss with almost no one: The client whose substance use is eroding the family's financial foundation. The beneficiary whose behavioral health challenges affect their capacity to manage distributions. The patriarch whose cognitive decline is obvious to everyone except himself. The trusted client who calls not about their portfolio but about their child's arrest, their spouse's psychiatric hospitalization, or their own struggle with a condition they have never discussed with anyone.
+        </p>
+
+        <p>
+          These are not edge cases. For advisors serving families of significant means, these situations represent some of the most consequential and most frequent challenges of their professional lives. Yet the professional literature offers remarkably little guidance on how to navigate them.
+        </p>
+
+        <h2>Who This Guide Serves</h2>
+
+        <p>
+          The Fiduciary Health Guide is written for two primary audiences.
+        </p>
+
+        <p>
+          <strong>For wealth advisors, trust officers, and family office directors</strong> — the professionals who encounter behavioral health intersections in their practice and who recognize that their training did not prepare them for these moments. This guide provides the frameworks, vocabularies, and decision-support resources that enable competent, confident engagement with situations that most advisory professionals have historically avoided.
+        </p>
+
+        <p>
+          <strong>For families of significant means</strong> — individuals and families who are navigating behavioral health challenges and who recognize that their circumstances create complexities that standard resources do not address. The isolation that accompanies significant wealth is real, and it extends into the behavioral health domain. This guide provides information, perspective, and pathways to the specialized resources that these situations demand.
+        </p>
+
+        <h2>Editorial Principles</h2>
+
+        <p>
+          Every article in the Fiduciary Health Guide adheres to several foundational principles:
+        </p>
+
+        <p>
+          <strong>Clinical accuracy.</strong> Content that addresses behavioral health topics reflects current clinical evidence and established best practices. We do not offer medical or clinical advice. We provide information that enables informed decision-making and productive conversations with qualified clinical professionals.
+        </p>
+
+        <p>
+          <strong>Fiduciary relevance.</strong> Every article is written with the fiduciary's practical reality in mind. Content is not theoretical — it addresses the specific situations, decisions, and conversations that wealth advisors and fiduciaries encounter in their practices.
+        </p>
+
+        <p>
+          <strong>Discretion and sensitivity.</strong> The topics addressed in this guide carry weight. Substance use, mental health, cognitive decline, family conflict, crisis — these are not abstract subjects. They are deeply personal experiences that affect real families. The tone of this guide reflects that reality.
+        </p>
+
+        <p>
+          <strong>Independence.</strong> The Fiduciary Health Guide does not maintain affiliate relationships with treatment providers, clinical programs, or financial product sponsors. Editorial content is not influenced by commercial considerations. This independence is essential to the trust that this resource aims to build with its readers.
+        </p>
+
+        <h2>The Structure of This Guide</h2>
+
+        <p>
+          The guide is organized around six content pillars, each addressing a distinct dimension of the intersection between behavioral health and significant wealth:
+        </p>
+
+        <p>
+          <strong><a href="/family-governance/">Family Governance</a></strong> addresses the structural and relational frameworks that families use to make decisions, resolve conflict, and maintain cohesion across generations — with particular attention to how behavioral health considerations should be integrated into governance architecture.
+        </p>
+
+        <p>
+          <strong><a href="/crisis-navigation/">Crisis Navigation</a></strong> provides preparation, response, and recovery frameworks for the specific categories of crisis that families of significant means encounter — from behavioral health emergencies to legal jeopardy to reputational threats.
+        </p>
+
+        <p>
+          <strong><a href="/wealth-stewardship/">Wealth Stewardship</a></strong> examines how behavioral health considerations should inform trust design, estate planning, and the multigenerational transfer of wealth.
+        </p>
+
+        <p>
+          <strong><a href="/family-office-operations/">Family Office Operations</a></strong> addresses the operational infrastructure required when family offices expand their mandates to include behavioral health coordination and crisis response.
+        </p>
+
+        <p>
+          <strong><a href="/integrated-family-wellness/">Integrated Family Wellness</a></strong> explores the physical, psychological, and relational dimensions of wellbeing in families of significant means — including the distinctive patterns that wealth creates.
+        </p>
+
+        <p>
+          <strong><a href="/the-advisors-practice/">The Advisor's Practice</a></strong> provides frameworks, vocabularies, and practical resources specifically for the professional advisor navigating behavioral health intersections in their daily work.
+        </p>
+
+        <h2>A Note on What This Guide Is Not</h2>
+
+        <p>
+          This guide is not a substitute for professional clinical care, legal counsel, or financial advice. It is an educational and informational resource designed to support better-informed decision-making by families and the professionals who serve them.
+        </p>
+
+        <p>
+          If you or someone you know is in immediate danger, contact emergency services. If you are experiencing a behavioral health crisis, contact the 988 Suicide and Crisis Lifeline by calling or texting 988, or the SAMHSA National Helpline at 1-800-662-4357.
+        </p>
+
+        <p>
+          For situations that require the kind of confidential, coordinated response that this guide describes throughout its pages, we invite you to <a href="/connect/">begin a conversation</a>.
+        </p>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

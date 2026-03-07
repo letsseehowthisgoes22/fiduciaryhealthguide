@@ -1,0 +1,140 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  schema?: object;
+}
+
+const {
+  title,
+  description = 'Independent guidance for fiduciaries, family offices, and families of significant means navigating behavioral health challenges with discretion and diligence.',
+  canonical,
+  ogImage = '/images/og-default.jpg',
+  schema,
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const siteUrl = 'https://fiduciaryhealthguide.com';
+const canonicalUrl = canonical || `${siteUrl}${currentPath}`;
+
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'The Guide', href: '/family-governance/' },
+  { label: 'Crisis & Coordination', href: '/crisis-navigation/' },
+  { label: 'For Advisors', href: '/the-advisors-practice/' },
+];
+
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} | Fiduciary Health Guide</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+  <meta property="og:site_name" content="Fiduciary Health Guide" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Schema.org -->
+  {schema && (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  )}
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">
+        Fiduciary Health<span>&nbsp;Guide</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="siteNav">
+        {navItems.map(item => (
+          <a href={item.href} aria-current={currentPath === item.href ? 'page' : undefined}>
+            {item.label}
+          </a>
+        ))}
+        <a href="/connect/" class="nav-connect">Connect</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <slot />
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h4 class="footer-heading">Fiduciary Health Guide</h4>
+          <p>
+            An independent resource for fiduciaries, family offices, and families of significant means navigating behavioral health challenges with discretion, diligence, and care.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-heading">The Guide</h4>
+          <ul class="footer-links">
+            <li><a href="/family-governance/">Family Governance</a></li>
+            <li><a href="/crisis-navigation/">Crisis Navigation</a></li>
+            <li><a href="/wealth-stewardship/">Wealth Stewardship</a></li>
+            <li><a href="/family-office-operations/">Family Office Operations</a></li>
+            <li><a href="/integrated-family-wellness/">Integrated Family Wellness</a></li>
+            <li><a href="/the-advisors-practice/">The Advisor's Practice</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="/about/">About</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/connect/">Connect With Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {new Date().getFullYear()} Fiduciary Health Guide. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/privacy/#disclaimer">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const nav = document.getElementById('siteNav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('is-open');
+      });
+    }
+  </script>
+</body>
+</html>

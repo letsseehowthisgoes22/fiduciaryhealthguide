@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Connect — Fiduciary Health Guide',
+  description: 'A confidential conversation about coordinating behavioral health resources for families of significant means.',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Fiduciary Health Guide',
+    url: 'https://fiduciaryhealthguide.com',
+  },
+};
+---
+
+<BaseLayout
+  title="Connect — Fiduciary Health Guide"
+  description="When your client or family member needs behavioral health coordination that requires discretion, expertise, and an understanding of the complexities that accompany significant wealth."
+  schema={schema}
+>
+  <div class="connect-hero">
+    <div class="container content-width">
+      <h1>Connect</h1>
+      <p class="lead">
+        When the situation requires more than information — when it requires coordination.
+      </p>
+    </div>
+  </div>
+
+  <div class="connect-section">
+    <div class="container content-width">
+      <h2>Who We Are</h2>
+      <p>
+        The Fiduciary Health Guide exists at the intersection of behavioral health and significant wealth — a space that most advisory resources do not address and most clinical resources do not understand. We are professionals who have spent careers navigating the complexities that arise when families of substantial means encounter behavioral health challenges that demand coordination, discretion, and expertise that operates at the level their circumstances require.
+      </p>
+      <p>
+        Our work is confidential by design and referral-based by practice. We do not advertise. We do not maintain affiliate relationships with treatment providers. We serve as an independent coordination resource for families and the professionals who advise them.
+      </p>
+    </div>
+  </div>
+
+  <div class="connect-section section--stone">
+    <div class="container content-width">
+      <h2>What We Coordinate</h2>
+      <p>
+        Families of significant means encountering behavioral health challenges rarely need a single service. They need coordinated response across domains that do not typically communicate with one another. A substance use crisis may simultaneously require clinical placement, legal counsel, crisis communications guidance, family coordination, and fiduciary decision-making — all within hours, all requiring professionals who understand the distinctive dynamics of significant wealth.
+      </p>
+      <p>
+        We coordinate across these domains. This includes identifying and vetting clinical resources for substance use, mental health, and behavioral health treatment. It extends to facilitating communication between legal counsel, medical teams, and family advisors. It encompasses coordinating with concierge medical providers, executive coaching professionals, crisis communications specialists, and the broader ecosystem of professionals that complex family situations demand.
+      </p>
+      <p>
+        We do not provide clinical care, legal advice, or financial counsel. We ensure that the professionals who do are identified, vetted, coordinated, and aligned with the family's circumstances and values.
+      </p>
+    </div>
+  </div>
+
+  <div class="connect-section">
+    <div class="container content-width">
+      <h2>Who This Is For</h2>
+      <p>
+        This resource exists for wealth advisors, trust officers, family office directors, and family members who have encountered a situation that exceeds the scope of any single professional relationship — and who recognize that the coordination required demands someone who understands both the clinical landscape and the complexities of significant wealth.
+      </p>
+      <p>
+        If you are navigating a situation that you cannot discuss with most of your professional network, this conversation is designed for precisely that circumstance.
+      </p>
+    </div>
+  </div>
+
+  <div class="connect-section section--stone">
+    <div class="container content-width">
+      <h2>How to Begin</h2>
+      <p>
+        A confidential conversation carries no obligation. We will listen, assess whether our coordination capabilities align with the situation, and — if they do not — direct you to resources better suited to your needs.
+      </p>
+
+      <form class="connect-form" action="#" method="POST" id="connect-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name" />
+        </div>
+
+        <div class="form-group">
+          <label for="contact-method">Preferred Contact Method</label>
+          <select id="contact-method" name="contact_method" required>
+            <option value="" disabled selected>Select your preference</option>
+            <option value="phone">Phone</option>
+            <option value="email">Email</option>
+            <option value="signal">Signal</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="contact-detail">Phone Number or Email Address</label>
+          <input type="text" id="contact-detail" name="contact_detail" required />
+        </div>
+
+        <div style="text-align: center;">
+          <button type="submit" class="form-submit">Begin a Conversation</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="trust-signals">
+    <div class="container content-width">
+      <p>No advertising. No affiliate relationships. Absolute discretion.</p>
+      <p>Global network. Independent coordination. Referral-based practice.</p>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,77 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Article {
+  title: string;
+  href: string;
+  description: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  pillar: string;
+  articles: Article[];
+}
+
+const { title, description, pillar, articles } = Astro.props;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: pillar,
+  description: description,
+  publisher: {
+    '@type': 'Organization',
+    name: 'Fiduciary Health Guide',
+    url: 'https://fiduciaryhealthguide.com',
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `https://fiduciaryhealthguide.com${Astro.url.pathname}`,
+  },
+};
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <article>
+    <div class="article-header">
+      <div class="container content-width">
+        <p class="breadcrumb">
+          <a href="/">Home</a> &rsaquo; {pillar}
+        </p>
+        <h1>{pillar}</h1>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="container content-width">
+        <slot />
+      </div>
+    </div>
+  </article>
+
+  <!-- Articles in this pillar -->
+  <section class="section section--stone">
+    <div class="container">
+      <div class="content-width" style="margin-bottom: 1.5rem;">
+        <h2>Articles in This Section</h2>
+      </div>
+      <div class="pillars-grid">
+        {articles.map(article => (
+          <a href={article.href} class="pillar-card">
+            <h3>{article.title}</h3>
+            <p>{article.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Discreet CTA -->
+  <div class="discreet-cta">
+    <div class="container content-width">
+      <p>When the path forward requires professional coordination, a confidential conversation is the first step.</p>
+      <a href="/connect/">Begin a Conversation</a>
+    </div>
+  </div>
+</BaseLayout>

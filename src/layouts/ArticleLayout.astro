@@ -1,0 +1,56 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  pillar: string;
+  pillarSlug: string;
+  subtitle?: string;
+}
+
+const { title, description, pillar, pillarSlug, subtitle } = Astro.props;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  publisher: {
+    '@type': 'Organization',
+    name: 'Fiduciary Health Guide',
+    url: 'https://fiduciaryhealthguide.com',
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `https://fiduciaryhealthguide.com${Astro.url.pathname}`,
+  },
+};
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <article>
+    <div class="article-header">
+      <div class="container content-width">
+        <p class="breadcrumb">
+          <a href="/">Home</a> &rsaquo; <a href={`/${pillarSlug}/`}>{pillar}</a>
+        </p>
+        <h1>{title}</h1>
+        {subtitle && <p class="subtitle">{subtitle}</p>}
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="container content-width">
+        <slot />
+      </div>
+    </div>
+  </article>
+
+  <!-- Discreet CTA -->
+  <div class="discreet-cta">
+    <div class="container content-width">
+      <p>When the path forward requires professional coordination, a confidential conversation is the first step.</p>
+      <a href="/connect/">Begin a Conversation</a>
+    </div>
+  </div>
+</BaseLayout>
