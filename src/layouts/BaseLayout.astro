@@ -66,6 +66,7 @@ import '../styles/global.css';
     <div class="container">
       <a href="/" class="site-logo">
         Fiduciary Health<span>&nbsp;Guide</span>
+        <span class="logo-sub">Independent Advisory Resource</span>
       </a>
       <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
         <span></span>
@@ -78,7 +79,7 @@ import '../styles/global.css';
             {item.label}
           </a>
         ))}
-        <a href="/connect/" class="nav-connect">Connect</a>
+        <a href="/connect/" class="nav-connect">Begin a Conversation</a>
       </nav>
     </div>
   </header>
@@ -95,7 +96,11 @@ import '../styles/global.css';
         <div class="footer-about">
           <h4 class="footer-heading">Fiduciary Health Guide</h4>
           <p>
-            An independent resource for fiduciaries, family offices, and families of significant means navigating behavioral health challenges with discretion, diligence, and care.
+            An independent resource for fiduciaries and families navigating behavioral health at the intersection of significant wealth.
+          </p>
+          <p style="font-size: 0.75rem; margin-top: 1rem; color: rgba(248, 245, 240, 0.5);">
+            Immediate danger: 911<br />
+            Behavioral health crisis: 988
           </p>
         </div>
         <div>
@@ -115,7 +120,14 @@ import '../styles/global.css';
             <li><a href="/about/">About</a></li>
             <li><a href="/glossary/">Glossary</a></li>
             <li><a href="/connect/">Connect With Us</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
           </ul>
+        </div>
+        <div class="footer-independence">
+          <h4 class="footer-heading">Independence</h4>
+          <p>No referral fees.</p>
+          <p>No affiliate relationships.</p>
+          <p>No sponsored content.</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -128,12 +140,61 @@ import '../styles/global.css';
     </div>
   </footer>
 
+  <!-- Crisis Float -->
+  <div class="crisis-float" id="crisisFloat">
+    <button class="crisis-float-btn" id="crisisBtn" aria-label="Crisis resources">
+      <span class="dot"></span>
+      Crisis Resources
+    </button>
+    <div class="crisis-panel" id="crisisPanel">
+      <div class="crisis-panel-header">
+        <h4>Crisis Resources</h4>
+        <button class="crisis-panel-close" id="crisisClose" aria-label="Close">&times;</button>
+      </div>
+      <div class="crisis-item">
+        <div class="crisis-label">988 Suicide &amp; Crisis Lifeline</div>
+        <div class="crisis-number"><a href="tel:988">988</a></div>
+        <div class="crisis-desc">Call or text, 24/7</div>
+      </div>
+      <div class="crisis-item">
+        <div class="crisis-label">SAMHSA National Helpline</div>
+        <div class="crisis-number"><a href="tel:1-800-662-4357">1-800-662-4357</a></div>
+        <div class="crisis-desc">Free referrals, 24/7</div>
+      </div>
+      <div class="crisis-item">
+        <div class="crisis-label">Immediate Danger</div>
+        <div class="crisis-number"><a href="tel:911">911</a></div>
+      </div>
+      <a href="/connect/" class="crisis-connect">Begin a Conversation &rarr;</a>
+    </div>
+  </div>
+
   <script>
+    // Nav toggle
     const toggle = document.getElementById('navToggle');
     const nav = document.getElementById('siteNav');
     if (toggle && nav) {
       toggle.addEventListener('click', () => {
         nav.classList.toggle('is-open');
+      });
+    }
+
+    // Crisis float
+    const crisisBtn = document.getElementById('crisisBtn');
+    const crisisPanel = document.getElementById('crisisPanel');
+    const crisisClose = document.getElementById('crisisClose');
+    if (crisisBtn && crisisPanel && crisisClose) {
+      crisisBtn.addEventListener('click', () => {
+        crisisPanel.classList.toggle('is-open');
+      });
+      crisisClose.addEventListener('click', () => {
+        crisisPanel.classList.remove('is-open');
+      });
+      document.addEventListener('click', (e) => {
+        const float = document.getElementById('crisisFloat');
+        if (float && !float.contains(e.target)) {
+          crisisPanel.classList.remove('is-open');
+        }
       });
     }
   </script>

@@ -11,34 +11,40 @@ const schema = {
 
 const pillars = [
   {
+    num: '01',
     title: 'Family Governance',
     href: '/family-governance/',
-    description: 'Structuring governance frameworks that address behavioral health with the same rigor applied to financial stewardship.',
+    description: 'Governance structures that integrate behavioral health considerations into family decision-making architecture.',
   },
   {
+    num: '02',
     title: 'Crisis Navigation',
     href: '/crisis-navigation/',
-    description: 'Coordinated intervention strategies and emergency protocols for families where visibility and discretion are paramount.',
+    description: 'Preparation, response, and recovery across the clinical, legal, reputational, and fiduciary domains.',
   },
   {
+    num: '03',
     title: 'Wealth Stewardship',
     href: '/wealth-stewardship/',
-    description: 'Integrating behavioral health considerations into trust structures, estate plans, and fiduciary decision-making.',
+    description: 'How behavioral health informs trust design, capacity assessment, and discretionary distribution decisions.',
   },
   {
+    num: '04',
     title: 'Family Office Operations',
     href: '/family-office-operations/',
-    description: 'Operational frameworks for family offices navigating behavioral health coordination and care team oversight.',
+    description: 'Operational infrastructure for behavioral health coordination, care team oversight, and crisis response.',
   },
   {
+    num: '05',
     title: 'Integrated Family Wellness',
     href: '/integrated-family-wellness/',
-    description: 'Holistic approaches to family wellbeing that honor the unique pressures of significant wealth.',
+    description: 'The psychological, relational, and physical dimensions of wellbeing in families of significant means.',
   },
   {
+    num: '06',
     title: "The Advisor's Practice",
     href: '/the-advisors-practice/',
-    description: 'Resources for wealth advisors and fiduciaries navigating the intersection of finance and behavioral health.',
+    description: 'Vocabulary, frameworks, and practical guidance for advisors navigating behavioral health in daily practice.',
   },
 ];
 ---
@@ -55,18 +61,45 @@ const pillars = [
     <div class="container hero-content">
       <h1>Where fiduciary responsibility meets behavioral health.</h1>
       <p>
-        Independent guidance for families of significant means, their trusted advisors, and the professionals who serve them — navigating behavioral health challenges with the discretion and diligence these matters demand.
+        Independent guidance for families of significant means and the professionals who serve them. For situations that fall outside what any training program addresses.
       </p>
-      <a href="/family-governance/" class="hero-cta">Explore The Guide</a>
+      <div>
+        <a href="#pillars" class="hero-cta">Explore the Guide</a>
+        <a href="/connect/" class="hero-cta hero-cta--outline">Begin a Conversation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audience Selector -->
+  <section class="audience-section">
+    <div class="container">
+      <p class="section-label">I Am Seeking Guidance As...</p>
+      <div class="audience-grid">
+        <a href="/the-advisors-practice/" class="audience-card">
+          <h3>A Wealth Advisor or Fiduciary</h3>
+          <p>Frameworks and vocabulary for practitioners navigating behavioral health intersections in their practice.</p>
+          <span class="card-link">The Advisor's Practice &rarr;</span>
+        </a>
+        <a href="/connect/" class="audience-card">
+          <h3>A Family Member</h3>
+          <p>Guidance for families whose circumstances create complexities standard resources do not address.</p>
+          <span class="card-link">Begin a Conversation &rarr;</span>
+        </a>
+        <a href="/family-office-operations/" class="audience-card">
+          <h3>A Family Office Director or Trust Officer</h3>
+          <p>Operational resources for behavioral health coordination, care team oversight, and crisis response.</p>
+          <span class="card-link">Family Office Operations &rarr;</span>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Content Pillars -->
-  <section class="pillars-section">
+  <section class="pillars-section" id="pillars">
     <div class="container">
       <div class="content-width" style="text-align: center; margin-bottom: 1rem;">
         <h2>The Guide</h2>
-        <p style="color: var(--slate-gray); font-family: var(--font-heading); font-style: italic;">
+        <p style="color: var(--text-mid); font-family: var(--font-heading); font-style: italic;">
           Six areas of practice where behavioral health and fiduciary responsibility converge.
         </p>
       </div>
@@ -86,13 +119,13 @@ const pillars = [
     <div class="container content-width" style="text-align: center;">
       <h2>For Advisors &amp; Fiduciaries</h2>
       <p>
-        Wealth advisors, trust officers, and family office directors increasingly encounter situations where a beneficiary's behavioral health intersects with fiduciary duty. These are not edge cases — they are among the most consequential decisions in a practice.
+        Wealth advisors, trust officers, and family office directors encounter situations where a beneficiary's behavioral health intersects with fiduciary duty. These are not edge cases. They are among the most consequential decisions in a practice.
       </p>
       <p>
-        The Fiduciary Health Guide provides frameworks, vocabularies, and decision-support resources designed specifically for professionals navigating these complex intersections.
+        This guide provides the vocabulary, the fiduciary frameworks, and the crisis preparation protocols built for how advisory practices and family offices actually operate.
       </p>
       <div style="margin-top: 2rem;">
-        <a href="/the-advisors-practice/" class="hero-cta" style="background-color: var(--deep-navy);">
+        <a href="/the-advisors-practice/" class="hero-cta" style="background-color: var(--navy);">
           Resources for Advisors
         </a>
       </div>
