@@ -30,27 +30,56 @@ const schema = {
 
   <div class="connect-section">
     <div class="container content-width">
-      <h2>A Practice, Not a Publication</h2>
+      <h2>What We Do</h2>
       <p>
-        We built this resource because the information should exist in public. But the practice came first. We coordinate behavioral health responses for families of significant means — the work that happens when an advisor calls at 11 PM because a client's adult child has been hospitalized, or when a trust officer realizes the settlor's decision-making capacity is deteriorating faster than anyone anticipated.
+        We coordinate behavioral health responses for families of significant means. When a crisis arrives — and it arrives as a clinical emergency, a legal exposure, a reputational risk, and a family rupture simultaneously — we sit at the center and ensure every professional involved is identified, vetted, and aligned.
       </p>
-      <p>
-        We have placed clinical companions with adolescents at boarding schools in four countries. We have coordinated simultaneous interventions involving legal counsel in three jurisdictions. We have managed treatment transitions for executives whose absence from a publicly traded company required narrative coordination with crisis communications teams. We have assembled and overseen multidisciplinary care teams for families navigating addiction, cognitive decline, eating disorders, and acute psychiatric crises — often while maintaining the discretion their circumstances demand.
-      </p>
-      <p>
-        No advertising. No affiliate relationships with treatment providers. No referral fees. Independent coordination, referral-based practice, absolute discretion.
-      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Crisis Coordination</h3>
+          <p>Immediate response when a family member is hospitalized, arrested, or in acute psychiatric crisis. We assemble the right clinical, legal, and communications professionals within hours — not days.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Treatment Placement</h3>
+          <p>Independent vetting and placement of residential treatment, intensive outpatient programs, and specialized psychiatric care. No referral fees. No affiliate relationships. We evaluate programs the way a fiduciary evaluates an investment.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Clinical Companion Oversight</h3>
+          <p>Placement and management of sober companions, clinical escorts, and therapeutic monitors — from adolescent boarding school placements across four countries to executive recovery support.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Multi-Disciplinary Team Assembly</h3>
+          <p>Building and coordinating care teams that span psychiatry, addiction medicine, family therapy, legal counsel, trust administration, and crisis communications. We bridge the gaps between professionals who have never worked together.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Family Advisory Support</h3>
+          <p>Guidance for trust officers, wealth advisors, and family office directors navigating behavioral health situations that fall outside their training but squarely within their fiduciary obligations.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Ongoing Care Management</h3>
+          <p>Long-term coordination for families managing chronic behavioral health conditions — cognitive decline, recurring addiction, treatment-resistant disorders — where continuity of oversight determines outcomes.</p>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="connect-section section--stone">
     <div class="container content-width">
-      <h2>What Coordination Looks Like</h2>
+      <h2>How We Work</h2>
       <p>
-        A family member's substance use crisis does not present as a single problem. It arrives as a clinical emergency, a legal exposure, a reputational risk, a family rupture, and a fiduciary question — simultaneously, often within hours. The professionals involved typically do not know each other and have never coordinated across these domains.
+        We do not provide clinical care, legal advice, or financial counsel. We ensure the professionals who do are the right ones for the specific situation, and that they communicate with each other.
       </p>
       <p>
-        We sit at the center. We identify and vet the right clinical resources. We facilitate communication between treatment teams, legal counsel, and family advisors. We coordinate with concierge physicians, crisis communications specialists, and family office staff. We do not provide clinical care, legal advice, or financial counsel. We ensure the professionals who do are identified, vetted, and aligned.
+        Every engagement begins with a confidential conversation. We listen, assess whether our coordination capabilities fit the situation, and — if they do not — direct you to resources better suited. No obligation. No sales process.
+      </p>
+      <p>
+        No advertising. No affiliate relationships with treatment providers. No referral fees. Independent coordination, referral-based practice, absolute discretion.
       </p>
     </div>
   </div>
@@ -59,37 +88,40 @@ const schema = {
     <div class="container content-width">
       <h2>Begin a Confidential Conversation</h2>
       <p>
-        A conversation carries no obligation. We will listen, assess whether our coordination capabilities fit the situation, and — if they do not — direct you to resources better suited.
-      </p>
-      <p>
-        <strong>For encrypted communication:</strong> Reach us on Signal. Contact details provided upon initial inquiry below, or reference our Signal availability with professionals who have previously engaged our coordination services.
+        Tell us what you are navigating. Every inquiry is treated with the discretion your situation demands.
       </p>
 
       <form class="connect-form" name="connect" method="POST" action="/connect/thank-you/" data-netlify="true" netlify-honeypot="bot-field" id="connect-form">
         <input type="hidden" name="form-name" value="connect" />
         <p class="hidden" style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required autocomplete="name" />
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your full name" />
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="contact-method">Preferred Contact Method</label>
-          <select id="contact-method" name="contact_method" required>
-            <option value="" disabled selected>Select your preference</option>
-            <option value="signal">Signal (encrypted)</option>
-            <option value="phone">Phone</option>
-            <option value="email">Email</option>
-          </select>
+        <div class="form-row form-row--two">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 555-5555" />
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="contact-detail">Phone Number or Email Address</label>
-          <input type="text" id="contact-detail" name="contact_detail" required />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="message" rows="5" placeholder="Describe your situation or question. All inquiries are confidential."></textarea>
+          </div>
         </div>
 
         <div style="text-align: center;">
-          <button type="submit" class="form-submit">Begin a Conversation</button>
+          <button type="submit" class="form-submit">Send Confidential Inquiry</button>
         </div>
       </form>
     </div>
