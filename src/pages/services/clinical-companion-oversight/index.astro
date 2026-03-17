@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Clinical Companion Oversight — Fiduciary Health Guide',
+  description: 'Placement and management of sober companions, clinical escorts, and therapeutic monitors for UHNW families.',
+  provider: {
+    '@type': 'Organization',
+    name: 'Fiduciary Health Guide',
+    url: 'https://fiduciaryhealthguide.com',
+  },
+};
+---
+
+<BaseLayout
+  title="Clinical Companion Oversight"
+  description="Placement and management of sober companions, clinical escorts, and therapeutic monitors for families of significant means."
+  schema={schema}
+>
+  <div class="service-hero">
+    <div class="container content-width">
+      <p class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; Services
+      </p>
+      <h1>Clinical Companion Oversight</h1>
+      <p class="lead">
+        Placed, managed, and held accountable — not just referred.
+      </p>
+    </div>
+  </div>
+
+  <div class="service-body">
+    <div class="container content-width">
+
+      <h2>Beyond the Referral</h2>
+      <p>
+        Sober companions, clinical escorts, and therapeutic monitors serve a critical function in behavioral health stabilization. They are also an unregulated industry. No licensing requirements. No standardized training. No oversight body. Families paying $1,500 to $3,000 per day deserve more than a name and a phone number.
+      </p>
+      <p>
+        We vet, place, and actively manage clinical companions. We define scope and expectations before placement begins. We maintain communication with the companion, the clinical team, and the family. We replace companions who are not performing. This is oversight, not referral.
+      </p>
+
+      <h2>Types of Clinical Companion Engagements</h2>
+      <div class="service-steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <div>
+            <h3>Post-Treatment Sober Companions</h3>
+            <p>The highest-risk period for relapse is the first 90 days after residential treatment. A sober companion provides structure, accountability, and immediate crisis response during this window.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <div>
+            <h3>Clinical Escorts</h3>
+            <p>Transport coordination for individuals entering treatment — voluntary or involuntary. This includes domestic and international transport, medical clearance coordination, and facility intake management.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <div>
+            <h3>Therapeutic Monitors</h3>
+            <p>Long-term monitoring for individuals with chronic behavioral health conditions. Drug testing protocols, treatment compliance verification, and regular reporting to the family or trustee.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">04</span>
+          <div>
+            <h3>Boarding School &amp; University Companions</h3>
+            <p>Placement of companions with adolescents and young adults at educational institutions — domestic and international. Academic support coordination, behavioral monitoring, and crisis response within the school community.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Our Oversight Model</h2>
+      <ul class="service-list">
+        <li>Credential verification and background screening for all companions</li>
+        <li>Written scope-of-engagement agreements defining responsibilities and boundaries</li>
+        <li>Regular reporting cadence to the family, trustee, or designated advisor</li>
+        <li>Direct communication channel between the companion and the clinical team</li>
+        <li>Performance evaluation and replacement protocols</li>
+        <li>Drug testing and compliance monitoring of the companion</li>
+      </ul>
+
+      <div class="service-cta-box">
+        <h3>Accountability changes outcomes. Oversight provides accountability.</h3>
+        <a href="/connect/" class="hero-cta" style="background-color: var(--navy);">Discuss Companion Placement</a>
+      </div>
+
+      <h2>Related Resources</h2>
+      <ul class="service-resources">
+        <li><a href="/integrated-family-wellness/sober-companion-model-fiduciary-guide/">The Sober Companion Model — A Fiduciary's Guide</a></li>
+        <li><a href="/crisis-navigation/vetting-treatment-program-due-diligence/">Vetting Treatment Programs</a></li>
+        <li><a href="/the-advisors-practice/coordinating-outside-advisory-scope/">Coordinating Outside Advisory Scope</a></li>
+      </ul>
+
+    </div>
+  </div>
+</BaseLayout>

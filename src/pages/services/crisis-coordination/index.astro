@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Crisis Coordination — Fiduciary Health Guide',
+  description: 'Immediate behavioral health crisis response and coordination for UHNW families and their advisors.',
+  provider: {
+    '@type': 'Organization',
+    name: 'Fiduciary Health Guide',
+    url: 'https://fiduciaryhealthguide.com',
+  },
+};
+---
+
+<BaseLayout
+  title="Crisis Coordination"
+  description="Immediate behavioral health crisis response for families of significant means. We assemble and align clinical, legal, and communications professionals within hours."
+  schema={schema}
+>
+  <div class="service-hero">
+    <div class="container content-width">
+      <p class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; Services
+      </p>
+      <h1>Crisis Coordination</h1>
+      <p class="lead">
+        When the call comes at 11 PM, every hour of delay compounds the damage.
+      </p>
+    </div>
+  </div>
+
+  <div class="service-body">
+    <div class="container content-width">
+
+      <h2>What This Means in Practice</h2>
+      <p>
+        A behavioral health crisis in a wealthy family is never one problem. It arrives as a clinical emergency, a legal exposure, a reputational risk, a family rupture, and a fiduciary question — simultaneously. The professionals needed to address each dimension do not know each other and have never worked together.
+      </p>
+      <p>
+        We sit at the center. Within hours of engagement, we identify the right clinical resources, connect legal counsel, coordinate with family office staff, and establish communication protocols that prevent the information fragmentation that turns a manageable crisis into a catastrophe.
+      </p>
+
+      <h2>How We Respond</h2>
+      <div class="service-steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <div>
+            <h3>Immediate Assessment</h3>
+            <p>We evaluate the clinical presentation, legal exposure, family dynamics, and reputational risk within the first conversation. This determines the response architecture.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <div>
+            <h3>Team Assembly</h3>
+            <p>We identify and engage the specific professionals required — psychiatrists, addiction medicine specialists, crisis communications teams, criminal defense attorneys — based on the situation, not a pre-set roster.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <div>
+            <h3>Coordination</h3>
+            <p>We manage communication across all parties. The treatment team knows what the legal team needs. The family office knows what the clinical team requires. Information flows through a single coordinating point.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">04</span>
+          <div>
+            <h3>Stabilization &amp; Transition</h3>
+            <p>Once the acute phase resolves, we coordinate the transition to ongoing care — treatment placement, aftercare planning, family communication protocols, and governance adjustments.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Common Crisis Scenarios</h2>
+      <ul class="service-list">
+        <li>Involuntary psychiatric holds and emergency department situations</li>
+        <li>Overdose or substance-related medical emergencies</li>
+        <li>Arrest, detention, or criminal exposure of a family member</li>
+        <li>Suicidal ideation or active self-harm</li>
+        <li>Acute psychotic episodes requiring immediate stabilization</li>
+        <li>Treatment facility failures requiring emergency transfer</li>
+        <li>International crises requiring cross-border clinical and legal coordination</li>
+      </ul>
+
+      <h2>What We Do Not Do</h2>
+      <p>
+        We do not provide clinical care, legal advice, or financial counsel. We do not replace any licensed professional. We ensure the right professionals are engaged and that they communicate with each other effectively.
+      </p>
+
+      <div class="service-cta-box">
+        <h3>Every crisis has a trajectory. Early coordination changes it.</h3>
+        <a href="/connect/" class="hero-cta" style="background-color: var(--navy);">Begin a Confidential Conversation</a>
+      </div>
+
+      <h2>Related Resources</h2>
+      <ul class="service-resources">
+        <li><a href="/crisis-navigation/behavioral-health-crisis-advisor-guide/">The First 72 Hours — An Advisor's Guide</a></li>
+        <li><a href="/crisis-navigation/fiduciary-crisis-preparedness-framework/">Fiduciary Crisis Preparedness Framework</a></li>
+        <li><a href="/crisis-navigation/medical-emergencies-uhnw-families/">Medical Emergencies in UHNW Families</a></li>
+        <li><a href="/crisis-navigation/coordinating-with-law-enforcement/">Coordinating With Law Enforcement</a></li>
+      </ul>
+
+    </div>
+  </div>
+</BaseLayout>

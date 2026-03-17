@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Ongoing Care Management — Fiduciary Health Guide',
+  description: 'Long-term behavioral health coordination for UHNW families managing chronic conditions.',
+  provider: {
+    '@type': 'Organization',
+    name: 'Fiduciary Health Guide',
+    url: 'https://fiduciaryhealthguide.com',
+  },
+};
+---
+
+<BaseLayout
+  title="Ongoing Care Management"
+  description="Long-term behavioral health coordination for families managing chronic conditions where continuity of oversight determines outcomes."
+  schema={schema}
+>
+  <div class="service-hero">
+    <div class="container content-width">
+      <p class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; Services
+      </p>
+      <h1>Ongoing Care Management</h1>
+      <p class="lead">
+        Chronic conditions require sustained coordination — not episodic crisis response.
+      </p>
+    </div>
+  </div>
+
+  <div class="service-body">
+    <div class="container content-width">
+
+      <h2>Beyond the Acute Phase</h2>
+      <p>
+        Many behavioral health conditions are chronic. Addiction. Bipolar disorder. Treatment-resistant depression. Eating disorders. Cognitive decline. These conditions require ongoing coordination that extends months and years beyond the initial crisis.
+      </p>
+      <p>
+        Families who invest in acute crisis response but abandon coordination afterward see predictable results: relapse, treatment re-entry, escalating family conflict, and fiduciary exposure. Sustained oversight is not optional. It is what separates recovery from repetition.
+      </p>
+
+      <h2>What Ongoing Care Management Includes</h2>
+      <div class="service-steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <div>
+            <h3>Treatment Compliance Monitoring</h3>
+            <p>Regular communication with treatment providers, medication management oversight, therapy attendance verification, and drug testing coordination. We provide the family and trustee with objective compliance data.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <div>
+            <h3>Provider Continuity</h3>
+            <p>Clinical teams change. Therapists move. Psychiatrists adjust medications. We maintain the institutional memory that prevents gaps in care and ensures new providers understand the full clinical history.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <div>
+            <h3>Family Communication</h3>
+            <p>Managing information flow between the individual in care, the family, the trustee, and the clinical team. Clear boundaries about what is shared, with whom, and under what circumstances.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">04</span>
+          <div>
+            <h3>Relapse Response Planning</h3>
+            <p>Pre-defined protocols for early warning signs and relapse events. The team, the intervention threshold, and the response architecture are established before they are needed.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Conditions Requiring Ongoing Management</h2>
+      <ul class="service-list">
+        <li>Substance use disorders — post-treatment monitoring and relapse prevention</li>
+        <li>Cognitive decline — capacity tracking, safety monitoring, and care transitions</li>
+        <li>Chronic psychiatric conditions — medication management, hospitalization prevention</li>
+        <li>Eating disorders — long-term recovery support, nutritional monitoring</li>
+        <li>Dual diagnosis — integrated management of co-occurring clinical conditions</li>
+        <li>Treatment-resistant conditions — provider coordination across multiple modalities</li>
+      </ul>
+
+      <h2>Reporting and Accountability</h2>
+      <p>
+        Trustees and family office directors require information to fulfill their oversight obligations. We provide structured reporting — monthly, quarterly, or on the cadence the situation demands. Reports include compliance data, clinical progress summaries, and risk assessments. All communication respects HIPAA boundaries and the individual's treatment relationship.
+      </p>
+
+      <div class="service-cta-box">
+        <h3>Recovery is not an event. It is a managed process.</h3>
+        <a href="/connect/" class="hero-cta" style="background-color: var(--navy);">Discuss Care Management</a>
+      </div>
+
+      <h2>Related Resources</h2>
+      <ul class="service-resources">
+        <li><a href="/integrated-family-wellness/sober-companion-model-fiduciary-guide/">The Sober Companion Model</a></li>
+        <li><a href="/integrated-family-wellness/aging-cognitive-decline-fiduciary/">Aging, Cognitive Decline, and the Fiduciary</a></li>
+        <li><a href="/wealth-stewardship/incentive-trusts-behavioral-provisions/">Incentive Trusts and Behavioral Provisions</a></li>
+        <li><a href="/family-office-operations/family-office-behavioral-health-audit/">Family Office Behavioral Health Audit</a></li>
+      </ul>
+
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Treatment Placement — Fiduciary Health Guide',
+  description: 'Independent vetting and placement of residential treatment, psychiatric care, and specialized programs for UHNW families.',
+  provider: {
+    '@type': 'Organization',
+    name: 'Fiduciary Health Guide',
+    url: 'https://fiduciaryhealthguide.com',
+  },
+};
+---
+
+<BaseLayout
+  title="Treatment Placement"
+  description="Independent vetting and placement of residential treatment, intensive outpatient programs, and specialized psychiatric care for families of significant means."
+  schema={schema}
+>
+  <div class="service-hero">
+    <div class="container content-width">
+      <p class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; Services
+      </p>
+      <h1>Treatment Placement</h1>
+      <p class="lead">
+        No referral fees. No affiliate relationships. We evaluate programs the way a fiduciary evaluates an investment.
+      </p>
+    </div>
+  </div>
+
+  <div class="service-body">
+    <div class="container content-width">
+
+      <h2>The Problem With Treatment Referrals</h2>
+      <p>
+        The luxury treatment industry markets amenities. Equine therapy. Ocean views. Chef-prepared meals. These features have no correlation with clinical outcomes. Families paying $80,000 to $120,000 per month deserve the same due diligence they apply to any major financial decision.
+      </p>
+      <p>
+        Most referrals in this space are driven by referral fees — payments from treatment facilities to the professionals who send them patients. This creates a structural conflict of interest that families rarely know exists. We accept no referral fees. Our only obligation is to the family.
+      </p>
+
+      <h2>Our Evaluation Framework</h2>
+      <div class="service-steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <div>
+            <h3>Clinical Assessment Review</h3>
+            <p>We begin with the clinical presentation — diagnosis, co-occurring conditions, treatment history, medication profile. The right program depends entirely on what the individual needs, not what is available.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <div>
+            <h3>Program Due Diligence</h3>
+            <p>We evaluate staff credentials, clinician-to-patient ratios, accreditation status (Joint Commission, CARF), outcome data where available, and the program's actual clinical methodology — not its marketing materials.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <div>
+            <h3>Fit Analysis</h3>
+            <p>Age, gender, cultural context, family dynamics, legal constraints, and the individual's own treatment history all inform placement. A program that works for one person may be counterproductive for another with a similar diagnosis.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">04</span>
+          <div>
+            <h3>Transition Planning</h3>
+            <p>Placement is not the endpoint. We coordinate step-down levels of care, aftercare providers, sober living arrangements, and family reintegration protocols before the individual enters treatment.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Placement Categories</h2>
+      <ul class="service-list">
+        <li>Residential substance use treatment (30, 60, 90-day and extended programs)</li>
+        <li>Psychiatric stabilization and inpatient psychiatry</li>
+        <li>Eating disorder treatment (residential and PHP/IOP)</li>
+        <li>Dual-diagnosis and co-occurring disorder programs</li>
+        <li>Adolescent and young adult specialized treatment</li>
+        <li>Executive and professional programs with confidentiality protocols</li>
+        <li>International treatment placement and cross-border coordination</li>
+        <li>Wilderness therapy and therapeutic boarding school evaluation</li>
+      </ul>
+
+      <div class="service-cta-box">
+        <h3>The right placement is the one informed by clinical need, not marketing.</h3>
+        <a href="/connect/" class="hero-cta" style="background-color: var(--navy);">Discuss Placement Needs</a>
+      </div>
+
+      <h2>Related Resources</h2>
+      <ul class="service-resources">
+        <li><a href="/crisis-navigation/vetting-treatment-program-due-diligence/">Vetting Treatment Programs — A Due Diligence Framework</a></li>
+        <li><a href="/crisis-navigation/international-treatment-placement/">International Treatment Placement</a></li>
+        <li><a href="/integrated-family-wellness/eating-disorders-affluent-families/">Eating Disorders in Affluent Families</a></li>
+        <li><a href="/integrated-family-wellness/addiction-affluence-advisor-guide/">Addiction and Affluence — An Advisor's Guide</a></li>
+      </ul>
+
+    </div>
+  </div>
+</BaseLayout>

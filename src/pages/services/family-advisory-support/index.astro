@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Family Advisory Support — Fiduciary Health Guide',
+  description: 'Guidance for trust officers, wealth advisors, and family office directors navigating behavioral health situations.',
+  provider: {
+    '@type': 'Organization',
+    name: 'Fiduciary Health Guide',
+    url: 'https://fiduciaryhealthguide.com',
+  },
+};
+---
+
+<BaseLayout
+  title="Family Advisory Support"
+  description="Guidance for trust officers, wealth advisors, and family office directors navigating behavioral health situations that fall within their fiduciary obligations."
+  schema={schema}
+>
+  <div class="service-hero">
+    <div class="container content-width">
+      <p class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; Services
+      </p>
+      <h1>Family Advisory Support</h1>
+      <p class="lead">
+        When the situation falls outside your training but inside your fiduciary duty.
+      </p>
+    </div>
+  </div>
+
+  <div class="service-body">
+    <div class="container content-width">
+
+      <h2>The Advisory Gap</h2>
+      <p>
+        Wealth advisors, trust officers, and family office directors are trained in finance, law, and governance. They are not trained in behavioral health. Yet behavioral health issues drive some of the most consequential decisions in their practice — trust distribution modifications, capacity evaluations, family governance crises, and emergency spending authority.
+      </p>
+      <p>
+        We provide the behavioral health expertise that advisory professionals need to fulfill their obligations. Not as a replacement for clinical professionals, but as a translation layer between the clinical and fiduciary worlds.
+      </p>
+
+      <h2>How We Support Advisory Professionals</h2>
+      <div class="service-steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <div>
+            <h3>Situation Assessment</h3>
+            <p>When a behavioral health issue emerges in your practice, we help you understand what you are seeing, what it means clinically, and what your obligations are as a fiduciary.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <div>
+            <h3>Resource Identification</h3>
+            <p>We identify the specific clinical, legal, and operational professionals the situation requires. You maintain the client relationship. We provide the specialized referral network.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <div>
+            <h3>Decision Framework Support</h3>
+            <p>Distribution decisions during active addiction. Capacity concerns with aging principals. Family governance tensions around treatment. We help you structure these decisions within your fiduciary framework.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">04</span>
+          <div>
+            <h3>Documentation Guidance</h3>
+            <p>Behavioral health situations create documentation requirements that differ from standard advisory practice. We help you understand what to document, how to document it, and what protects you if decisions are later challenged.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Common Advisory Situations</h2>
+      <ul class="service-list">
+        <li>A beneficiary's substance use is accelerating and trust distributions may be enabling it</li>
+        <li>A settlor's cognitive capacity is declining and no succession plan addresses it</li>
+        <li>A family member refuses treatment and the family is seeking governance leverage</li>
+        <li>A client's adult child has been arrested and the advisor is the first call</li>
+        <li>Household staff reports concerning behavior and the family office must respond</li>
+        <li>A family dispute about treatment approach is paralyzing decision-making</li>
+      </ul>
+
+      <div class="service-cta-box">
+        <h3>You do not need to become a behavioral health expert. You need access to one.</h3>
+        <a href="/connect/" class="hero-cta" style="background-color: var(--navy);">Schedule a Consultation</a>
+      </div>
+
+      <h2>Related Resources</h2>
+      <ul class="service-resources">
+        <li><a href="/the-advisors-practice/difficult-conversations-advisor-guide/">Difficult Conversations — An Advisor's Guide</a></li>
+        <li><a href="/the-advisors-practice/ethical-obligations-client-in-danger/">Ethical Obligations When a Client Is in Danger</a></li>
+        <li><a href="/the-advisors-practice/fiduciary-standard-in-practice/">The Fiduciary Standard in Practice</a></li>
+        <li><a href="/wealth-stewardship/trust-distributions-active-addiction/">Trust Distributions During Active Addiction</a></li>
+      </ul>
+
+    </div>
+  </div>
+</BaseLayout>

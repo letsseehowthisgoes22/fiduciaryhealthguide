@@ -47,6 +47,46 @@ const pillars = [
     description: 'Vocabulary, frameworks, and practical guidance for advisors navigating behavioral health in daily practice.',
   },
 ];
+
+const services = [
+  {
+    title: 'Crisis Coordination',
+    href: '/services/crisis-coordination/',
+    description: 'Immediate response infrastructure when a family member is hospitalized, arrested, or in acute crisis.',
+  },
+  {
+    title: 'Treatment Placement',
+    href: '/services/treatment-placement/',
+    description: 'Independent vetting and placement of residential, outpatient, and specialized psychiatric care.',
+  },
+  {
+    title: 'Clinical Companion Oversight',
+    href: '/services/clinical-companion-oversight/',
+    description: 'Sober companions, clinical escorts, and therapeutic monitors — placed, managed, and held accountable.',
+  },
+  {
+    title: 'Advisory Team Assembly',
+    href: '/services/advisory-team-assembly/',
+    description: 'Building multidisciplinary care teams across psychiatry, law, trust administration, and crisis communications.',
+  },
+  {
+    title: 'Family Advisory Support',
+    href: '/services/family-advisory-support/',
+    description: 'Guidance for fiduciaries navigating behavioral health situations within their duty of care.',
+  },
+  {
+    title: 'Ongoing Care Management',
+    href: '/services/ongoing-care-management/',
+    description: 'Long-term coordination for chronic conditions where continuity of oversight determines outcomes.',
+  },
+];
+
+const stats = [
+  { number: '75+', label: 'Published guides and frameworks' },
+  { number: '10', label: 'Metro-specific resource directories' },
+  { number: '6', label: 'Core practice areas' },
+  { number: '0', label: 'Referral fees or affiliate relationships' },
+];
 ---
 
 <BaseLayout
@@ -61,7 +101,7 @@ const pillars = [
     <div class="container hero-content">
       <h1>Where fiduciary responsibility meets behavioral health.</h1>
       <p>
-        Independent guidance for families of significant means and the professionals who serve them. For situations that fall outside what any training program addresses.
+        Independent guidance for families of significant means and the professionals who serve them.
       </p>
       <div>
         <a href="#pillars" class="hero-cta">Explore the Guide</a>
@@ -77,7 +117,7 @@ const pillars = [
       <div class="audience-grid">
         <a href="/the-advisors-practice/" class="audience-card">
           <h3>A Wealth Advisor or Fiduciary</h3>
-          <p>Frameworks and vocabulary for practitioners navigating behavioral health intersections in their practice.</p>
+          <p>Frameworks for practitioners navigating behavioral health intersections in their practice.</p>
           <span class="card-link">The Advisor's Practice &rarr;</span>
         </a>
         <a href="/connect/" class="audience-card">
@@ -87,7 +127,7 @@ const pillars = [
         </a>
         <a href="/family-office-operations/" class="audience-card">
           <h3>A Family Office Director or Trust Officer</h3>
-          <p>Operational resources for behavioral health coordination, care team oversight, and crisis response.</p>
+          <p>Operational resources for behavioral health coordination and crisis response.</p>
           <span class="card-link">Family Office Operations &rarr;</span>
         </a>
       </div>
@@ -114,31 +154,158 @@ const pillars = [
     </div>
   </section>
 
-  <!-- For Advisors Section -->
+  <!-- The Problem We Solve -->
   <section class="section section--stone">
-    <div class="container content-width" style="text-align: center;">
-      <h2>For Advisors &amp; Fiduciaries</h2>
-      <p>
-        Wealth advisors, trust officers, and family office directors encounter situations where a beneficiary's behavioral health intersects with fiduciary duty. These are not edge cases. They are among the most consequential decisions in a practice.
-      </p>
-      <p>
-        This guide provides the vocabulary, the fiduciary frameworks, and the crisis preparation protocols built for how advisory practices and family offices actually operate.
-      </p>
-      <div style="margin-top: 2rem;">
-        <a href="/the-advisors-practice/" class="hero-cta" style="background-color: var(--navy);">
-          Resources for Advisors
+    <div class="container content-width">
+      <h2 style="text-align: center;">The Gap We Fill</h2>
+      <div class="home-two-col">
+        <div>
+          <p>
+            When a beneficiary's substance use disorder intersects with a dynasty trust's distribution provisions, no single professional has the complete picture. The psychiatrist does not understand trust law. The trust officer does not understand addiction medicine. The family attorney does not understand crisis stabilization protocols.
+          </p>
+          <p>
+            We operate in that gap. We coordinate across clinical, legal, fiduciary, and operational domains — ensuring that every professional involved is identified, vetted, and aligned toward a coherent response.
+          </p>
+        </div>
+        <div>
+          <p>
+            This is not therapy. It is not legal counsel. It is not financial advice. It is the coordination layer that wealthy families assume exists but discover — in the middle of a crisis — does not.
+          </p>
+          <p>
+            Every resource on this site reflects direct experience managing these situations. No theory. No hypotheticals. Protocols and frameworks drawn from the field.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="section">
+    <div class="container">
+      <div class="content-width" style="text-align: center; margin-bottom: 2rem;">
+        <h2>Coordination Services</h2>
+        <p style="color: var(--text-mid);">
+          Independent. No referral fees. No affiliate relationships with treatment providers.
+        </p>
+      </div>
+      <div class="services-grid">
+        {services.map(service => (
+          <a href={service.href} class="service-card service-card--link">
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+            <span class="card-link">Learn more &rarr;</span>
+          </a>
+        ))}
+      </div>
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="/connect/" class="hero-cta" style="background-color: var(--navy);">
+          Discuss Your Situation
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Discreet Connect Signal -->
+  <!-- Stats Bar -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        {stats.map(stat => (
+          <div class="stat-item">
+            <span class="stat-number">{stat.number}</span>
+            <span class="stat-label">{stat.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Serve -->
+  <section class="section">
+    <div class="container content-width">
+      <h2 style="text-align: center;">Who This Resource Serves</h2>
+      <div class="who-grid">
+        <div class="who-item">
+          <h3>Trust Officers &amp; Fiduciaries</h3>
+          <p>Navigating distribution decisions when a beneficiary's behavioral health is deteriorating. Managing capacity concerns before they become litigation.</p>
+        </div>
+        <div class="who-item">
+          <h3>Wealth Advisors</h3>
+          <p>The call at 11 PM about a client's adult child. The conversation about cognitive decline no one else will initiate. The referral that cannot come from a Google search.</p>
+        </div>
+        <div class="who-item">
+          <h3>Family Office Directors</h3>
+          <p>Building behavioral health response infrastructure before a crisis demands it. Coordinating across household staff, legal counsel, and clinical teams.</p>
+        </div>
+        <div class="who-item">
+          <h3>Family Members</h3>
+          <p>Families whose resources create both opportunity and complication. Where standard treatment referrals do not account for the full context.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Resources -->
+  <section class="section section--stone">
+    <div class="container content-width">
+      <h2 style="text-align: center;">Start Here</h2>
+      <p style="text-align: center; color: var(--text-mid); margin-bottom: 2rem;">
+        The most referenced guides across our practice areas.
+      </p>
+      <div class="featured-grid">
+        <a href="/crisis-navigation/behavioral-health-crisis-advisor-guide/" class="featured-card">
+          <span class="featured-pillar">Crisis Navigation</span>
+          <h3>The First 72 Hours</h3>
+          <p>What advisors need to know when a client or family member enters an acute behavioral health emergency.</p>
+        </a>
+        <a href="/wealth-stewardship/trust-distributions-active-addiction/" class="featured-card">
+          <span class="featured-pillar">Wealth Stewardship</span>
+          <h3>Trust Distributions During Active Addiction</h3>
+          <p>Fiduciary obligations, distribution standards, and protective mechanisms when a beneficiary is actively using.</p>
+        </a>
+        <a href="/the-advisors-practice/difficult-conversations-advisor-guide/" class="featured-card">
+          <span class="featured-pillar">The Advisor's Practice</span>
+          <h3>Difficult Conversations</h3>
+          <p>How to initiate and navigate conversations about behavioral health with clients and family members.</p>
+        </a>
+        <a href="/family-governance/rising-generation-rejects-treatment/" class="featured-card">
+          <span class="featured-pillar">Family Governance</span>
+          <h3>When the Rising Generation Refuses Treatment</h3>
+          <p>Governance frameworks, legal options, and family dynamics when an adult child will not accept help.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hyperlocal Resources -->
+  <section class="section">
+    <div class="container content-width">
+      <h2 style="text-align: center;">Behavioral Health Resources by Region</h2>
+      <p style="text-align: center; color: var(--text-mid); margin-bottom: 2rem;">
+        Market-specific clinical infrastructure, legal frameworks, and advisory ecosystems.
+      </p>
+      <div class="region-grid">
+        <a href="/integrated-family-wellness/behavioral-health-resources-new-york/" class="region-link">New York</a>
+        <a href="/integrated-family-wellness/behavioral-health-resources-greenwich/" class="region-link">Greenwich &amp; Gold Coast</a>
+        <a href="/integrated-family-wellness/behavioral-health-resources-palm-beach/" class="region-link">Palm Beach</a>
+        <a href="/integrated-family-wellness/behavioral-health-resources-miami/" class="region-link">Miami</a>
+        <a href="/integrated-family-wellness/behavioral-health-resources-dallas/" class="region-link">Dallas</a>
+        <a href="/integrated-family-wellness/behavioral-health-resources-austin/" class="region-link">Austin</a>
+        <a href="/integrated-family-wellness/behavioral-health-resources-los-angeles/" class="region-link">Los Angeles</a>
+        <a href="/integrated-family-wellness/behavioral-health-resources-san-francisco/" class="region-link">San Francisco Bay Area</a>
+        <a href="/integrated-family-wellness/behavioral-health-resources-scottsdale/" class="region-link">Scottsdale &amp; Paradise Valley</a>
+        <a href="/integrated-family-wellness/behavioral-health-resources-chicago/" class="region-link">Chicago &amp; North Shore</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
   <div class="discreet-cta">
     <div class="container content-width">
+      <h2 style="color: var(--cream); font-size: 1.5rem; margin-bottom: 0.75rem;">Confidential. Independent. No obligation.</h2>
       <p>
         When circumstances require more than a guide — when families need a professional liaison who understands both the clinical landscape and the expectations of significant wealth.
       </p>
-      <a href="/connect/">Learn About Our Services</a>
+      <a href="/connect/" class="hero-cta" style="margin-top: 1rem; display: inline-block;">Begin a Conversation</a>
     </div>
   </div>
 

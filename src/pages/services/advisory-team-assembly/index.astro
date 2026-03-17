@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Advisory Team Assembly — Fiduciary Health Guide',
+  description: 'Building and coordinating multidisciplinary behavioral health care teams for UHNW families.',
+  provider: {
+    '@type': 'Organization',
+    name: 'Fiduciary Health Guide',
+    url: 'https://fiduciaryhealthguide.com',
+  },
+};
+---
+
+<BaseLayout
+  title="Advisory Team Assembly"
+  description="Building and coordinating multidisciplinary care teams that span psychiatry, addiction medicine, legal counsel, trust administration, and crisis communications."
+  schema={schema}
+>
+  <div class="service-hero">
+    <div class="container content-width">
+      <p class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; Services
+      </p>
+      <h1>Advisory Team Assembly</h1>
+      <p class="lead">
+        The right professionals, identified and aligned before the situation demands it.
+      </p>
+    </div>
+  </div>
+
+  <div class="service-body">
+    <div class="container content-width">
+
+      <h2>Why Assembly Matters</h2>
+      <p>
+        Behavioral health situations in wealthy families span clinical, legal, fiduciary, and operational domains. No single professional covers all of them. The family's existing advisory team — wealth advisor, estate attorney, CPA — was not assembled for this purpose.
+      </p>
+      <p>
+        When a crisis arrives, families discover gaps. The psychiatrist does not coordinate with the trust officer. The criminal defense attorney does not communicate with the treatment team. The family office director has no protocol for managing information flow. These gaps produce conflicting advice, delayed response, and avoidable harm.
+      </p>
+
+      <h2>What We Assemble</h2>
+      <div class="service-steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <div>
+            <h3>Clinical Team</h3>
+            <p>Psychiatrists, addiction medicine specialists, psychologists, family therapists, neuropsychologists for capacity evaluation, and concierge physicians — vetted for experience with high-net-worth family dynamics.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <div>
+            <h3>Legal Team</h3>
+            <p>Involuntary commitment counsel, criminal defense attorneys, family law specialists, guardianship attorneys, and healthcare compliance advisors — selected for jurisdiction-specific expertise.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <div>
+            <h3>Operational Team</h3>
+            <p>Crisis communications firms, security consultants, clinical companions, medical transport coordinators, and executive protection professionals — integrated with the clinical response.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">04</span>
+          <div>
+            <h3>Fiduciary Team</h3>
+            <p>Trust officers, wealth advisors, family office directors, and trust protectors — briefed on their specific obligations and decision points when behavioral health intersects with estate and trust structures.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Proactive vs. Reactive Assembly</h2>
+      <p>
+        Most teams are assembled reactively — in the middle of a crisis, under pressure, with limited options. Proactive assembly identifies the right professionals, establishes relationships, and defines communication protocols before they are needed. The difference in outcome quality is significant.
+      </p>
+      <p>
+        We recommend families with known behavioral health risk factors complete team assembly as part of their annual governance review. The cost of preparation is negligible compared to the cost of an uncoordinated crisis response.
+      </p>
+
+      <div class="service-cta-box">
+        <h3>The team you assemble before the crisis determines the outcome during it.</h3>
+        <a href="/connect/" class="hero-cta" style="background-color: var(--navy);">Build Your Advisory Team</a>
+      </div>
+
+      <h2>Related Resources</h2>
+      <ul class="service-resources">
+        <li><a href="/the-advisors-practice/multidisciplinary-advisory-team/">Building the Multidisciplinary Advisory Team</a></li>
+        <li><a href="/the-advisors-practice/coordinating-outside-advisory-scope/">Coordinating Outside Advisory Scope</a></li>
+        <li><a href="/crisis-navigation/fiduciary-crisis-preparedness-framework/">Fiduciary Crisis Preparedness Framework</a></li>
+        <li><a href="/family-office-operations/staffing-family-office/">Staffing the Family Office</a></li>
+      </ul>
+
+    </div>
+  </div>
+</BaseLayout>
