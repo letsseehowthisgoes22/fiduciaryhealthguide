@@ -1202,9 +1202,29 @@ img {
   transition: border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
+a.service-card {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
 .service-card:hover {
   border-color: var(--gold);
   box-shadow: var(--shadow-md, 0 4px 12px rgba(0,0,0,0.08));
+}
+
+.service-card-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+  transition: color var(--transition-base);
+}
+
+.service-card:hover .service-card-link {
+  color: var(--navy);
 }
 
 .service-card h3 {
