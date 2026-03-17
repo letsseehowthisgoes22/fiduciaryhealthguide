@@ -79,6 +79,19 @@ import '../styles/global.css';
             {item.label}
           </a>
         ))}
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            Services <span class="dropdown-arrow">&#9662;</span>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="/services/crisis-coordination/">Crisis Coordination</a>
+            <a href="/services/treatment-placement/">Treatment Placement</a>
+            <a href="/services/clinical-companion-oversight/">Clinical Companions</a>
+            <a href="/services/advisory-team-assembly/">Advisory Team Assembly</a>
+            <a href="/services/family-advisory-support/">Family Advisory Support</a>
+            <a href="/services/ongoing-care-management/">Ongoing Care Management</a>
+          </div>
+        </div>
         <a href="/connect/" class="nav-connect">Begin a Conversation</a>
       </nav>
     </div>
@@ -187,6 +200,23 @@ import '../styles/global.css';
     if (toggle && nav) {
       toggle.addEventListener('click', () => {
         nav.classList.toggle('is-open');
+      });
+    }
+
+    // Services dropdown
+    const dropdownTrigger = document.querySelector('.nav-dropdown-trigger');
+    const dropdown = document.querySelector('.nav-dropdown');
+    if (dropdownTrigger && dropdown) {
+      dropdownTrigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle('is-open');
+        dropdownTrigger.setAttribute('aria-expanded', dropdown.classList.contains('is-open'));
+      });
+      document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove('is-open');
+          dropdownTrigger.setAttribute('aria-expanded', 'false');
+        }
       });
     }
 
