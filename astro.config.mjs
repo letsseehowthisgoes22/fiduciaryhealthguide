@@ -9,11 +9,4 @@ export default defineConfig({
     format: 'directory',
   },
   integrations: [sitemap()],
-  vite: {
-    build: {
-      rollupOptions: {
-        external: ['/pagefind/pagefind-ui.js'],
-      },
-    },
-  },
 });
